@@ -15,9 +15,49 @@
         <div class="btn btn-info" onclick="SpyApp.addSpy()"><i class="fa fa-3x fa-pied-piper-alt"></i></div>
     </div>
     <div class="well" id="spy-table">
-
+         <h2><i class="fa fa-spin fa-cog"></i> Loading...</h2>
     </div>
-
+    <!--Modal Start-->
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">
+                        Editing information for
+                        <span id="modalTitle"></span>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <ul class="fa-ul">
+                        <li>
+                            <i class="fa fa-li fa-user"></i>
+                            <input class="input-sm" type="text" id="editName" />
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-h-square"> </i>
+                            <input class="input-sm" type="text" id="editNumber" />
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-gamepad"></i>
+                            <input class="input-sm" type="text" id="editWeapon" />
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-glass"></i>
+                            <input class="input-sm" type="text" id="editDrink" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button id="deleteButton" class="btn btn-danger" style="float:left;">
+                        <i class="fa fa-trash-o"></i>
+                    </button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" id="saveChanges" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     <script src="Scripts/jquery-1.9.1.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/_Script.js"></script>
